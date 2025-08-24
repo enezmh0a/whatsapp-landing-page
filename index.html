@@ -1,0 +1,80 @@
+
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>تواصل واتساب | WhatsApp Contact</title>
+  <meta name="description" content="تواصل معنا مباشرة على واتساب من خلال الزر في الأسفل.">
+  <meta name="robots" content="noindex,nofollow">
+  <!-- Open Graph -->
+  <meta property="og:title" content="تواصل واتساب">
+  <meta property="og:description" content="إضغط لبدء المحادثة على واتساب الآن.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="">
+  <style>
+    :root { --bg:#0f172a; --card:#111827; --txt:#e5e7eb; --accent:#22c55e; --muted:#94a3b8; }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Arial,Apple Color Emoji,Segoe UI Emoji;background:linear-gradient(180deg,#0f172a,#060b1b);color:var(--txt);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+    .wrap{max-width:720px;width:100%}
+    .card{background:rgba(17,24,39,.8);border:1px solid rgba(148,163,184,.1);border-radius:20px;padding:28px;backdrop-filter:blur(6px);box-shadow:0 10px 30px rgba(0,0,0,.35)}
+    h1{margin:0 0 12px;font-size:28px;line-height:1.2}
+    p{margin:0 0 14px;color:var(--muted);font-size:16px}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+    a.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 18px;border-radius:14px;text-decoration:none;font-weight:600;border:1px solid rgba(255,255,255,.08)}
+    a.whatsapp{background:var(--accent);color:#03210f}
+    a.call{background:transparent;color:var(--txt)}
+    .meta{margin-top:22px;font-size:12px;color:var(--muted)}
+    .footer{margin-top:28px;font-size:12px;color:var(--muted)}
+    .footer a{color:var(--txt)}
+    .en{direction:ltr;text-align:left;margin-top:18px}
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(148,163,184,.15);color:var(--txt);font-size:12px;margin-bottom:10px}
+  </style>
+  <script>
+    // Optional: Append basic UTM parameters so you can see traffic sources later
+    (function(){
+      try {
+        const params = new URLSearchParams(window.location.search);
+        if(!params.get('utm_source')){
+          params.set('utm_source','snapchat');
+          params.set('utm_medium','cpc');
+          params.set('utm_campaign', params.get('sc_cid') || 'snap-ad');
+          const url = new URL(window.location.href);
+          url.search = params.toString();
+          window.history.replaceState(null,'',url.toString());
+        }
+      } catch(e){}
+    })();
+    function openWhatsApp(){
+      // Saudi number 966505924346 (update if needed)
+      var phone = "966505924346";
+      // Prefilled bilingual message (URL-encoded)
+      var msg = encodeURIComponent("مرحبا 👋 أتيت من سناب شات. أود الاستفسار/الحجز.\nHello, I came from Snapchat and want to chat/booking.");
+      var link = "https://wa.me/" + phone + "?text=" + msg;
+      window.location.href = link;
+    }
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <span class="badge">إعلان سناب شات • Snapchat Ad</span>
+      <h1>تواصل معنا عبر واتساب الآن</h1>
+      <p>إضغط زر واتساب لبدء المحادثة مباشرة. لا حاجة لموقع خارجي.</p>
+      <div class="cta">
+        <a class="btn whatsapp" href="javascript:void(0)" onclick="openWhatsApp()" aria-label="Open WhatsApp">ابدأ محادثة واتساب</a>
+        <a class="btn call" href="tel:+966505924346" aria-label="Call Phone">اتصال مباشر</a>
+      </div>
+      <div class="en">
+        <h1>Chat with us on WhatsApp</h1>
+        <p>Tap the button to open WhatsApp and start chatting instantly.</p>
+      </div>
+      <div class="meta">قد يتم استخدام معلومات الاتصال الخاصة بك لخدمتك فقط. لن نشاركها مع أطراف أخرى.</div>
+      <div class="footer">
+        <strong>سياسة الخصوصية المختصرة:</strong> نحن لا نجمع أي بيانات شخصية على هذا الموقع باستثناء ما تشاركنا به عبر واتساب أو الاتصال. <br>
+        <strong>Short Privacy Notice:</strong> We do not collect personal data on this page other than what you share via WhatsApp or phone.
+      </div>
+    </div>
+  </div>
+</body>
+</html>
